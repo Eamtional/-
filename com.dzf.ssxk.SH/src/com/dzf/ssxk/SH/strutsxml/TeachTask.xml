@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />   
+    
+    <package name="TeachTask" extends="struts-default" namespace="/TeachTask">
+    	<action name="TeachTask">
+    	<result>/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    	</action>
+    	<action name="select" class="com.dzf.ssxk.SH.action.TeachTaskAction" method="select"></action>
+    	<action name="sel" class="com.dzf.ssxk.SH.action.TeachTaskAction" method="sel"></action>
+    	<action name="sele" class="com.dzf.ssxk.SH.action.TeachTaskAction" method="sele"></action>
+    	<action name="delete" class="com.dzf.ssxk.SH.action.TeachTaskAction" method="delete">
+    		<result name="success">/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    		<result name="error">/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    	</action>
+    	<action name="insert" class="com.dzf.ssxk.SH.action.TeachTaskAction" method="insert">
+    		<result name="success">/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    		<result name="error">/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    	</action> 
+    <!-- 	<action name="ins" class="com.dzf.ssxk.SH.action.TeachTaskAction" method="inse">
+    		<result name="success">/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    		<result name="error">/WEB-INF/content/Teacher/TeachTask.jsp</result>
+    	</action>  -->
+    </package>
+   
+ 
+    
+ </struts>
+
+
+

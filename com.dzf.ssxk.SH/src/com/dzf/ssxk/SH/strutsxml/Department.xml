@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />   
+    
+    <package name="Department" extends="struts-default" namespace="/Department">
+    	<action name="Department">
+    	<result>/WEB-INF/content/Admin/Department.jsp</result>
+    	</action>
+    	<action name="select" class="com.dzf.ssxk.SH.action.DepartmentAction" method="select"></action>
+    	<action name="insert" class="com.dzf.ssxk.SH.action.DepartmentAction" method="insert">
+    		<result name="success">/WEB-INF/content/Admin/Department.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/Department.jsp</result>
+    	</action> 
+    	<action name="delete" class="com.dzf.ssxk.SH.action.DepartmentAction" method="delete">
+    		<result name="success">/WEB-INF/content/Admin/Department.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/Department.jsp</result>
+    	</action> 
+    	
+    </package>
+   
+ 
+    
+ </struts>
+
+
+

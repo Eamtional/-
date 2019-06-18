@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.dzf.ssxk.SH.model">
+	
+	<class name="College" table="T_College">
+		<id name="CollegeID" column="CollegeID" type="int" >
+			<generator class="assigned"></generator>
+		</id>
+		<property name="CollegeName" column="CollegeName" type="string"
+			length="50"></property>
+		<property name="Remark" column="Remark" type="text"></property>
+		
+	    <set name="department" inverse="true" lazy="false" >
+			<key column="CollegeID" ></key>
+			<one-to-many class="Department"/>
+		</set>
+		 <set name="teacher" inverse="true" lazy="false" >
+			<key column="CollegeID" ></key>
+			<one-to-many class="Teacher"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

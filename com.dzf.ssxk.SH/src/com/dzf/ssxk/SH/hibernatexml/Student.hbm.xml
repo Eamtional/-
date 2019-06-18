@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.dzf.ssxk.SH.model">
+	
+	<class name="Student" table="T_Student">
+		<id name="StudentID" column="StudentID" type="string">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="StudentName" column="StudentName" type="string" length="50"></property>
+		<property name="Sex" column="Sex" type="string"></property>
+		<property name="Birthday" column="Birthday" type="string" length="50"></property>
+		<property name="Family" column="Family" type="string"></property>
+		<property name="Password" column="Password" type="string" length="50"></property>
+		<property name="Photo" column="Photo" type="string" length="50"></property>
+		<property name="Remark" column="Remark" type="text"></property>
+		
+		 <many-to-one name="classs" class="Class" column="ClassID" lazy="false"></many-to-one> 
+	</class>
+ 
+</hibernate-mapping>

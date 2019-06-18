@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>  
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />   
+    
+    <package name="default" extends="struts-default" namespace="/Admin">
+    	<action name="*">
+    	<result>/WEB-INF/content/Admin/{1}.jsp</result>
+    	</action>
+    	 <action name="Log" class="com.dzf.ssxk.SH.action.AdminAction" method="Login">
+    		<result name="success">/WEB-INF/content/Admin/Admin.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/Login.jsp</result>
+    	</action>
+    	<action name="select" class="com.dzf.ssxk.SH.action.AdminAction" method="Select"></action>
+    	<action name="delete" class="com.dzf.ssxk.SH.action.AdminAction" method="delete">
+    		<result name="success">/WEB-INF/content/Admin/Admin.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/Admin.jsp</result>
+    	</action>
+    	<action name="insert" class="com.dzf.ssxk.SH.action.AdminAction" method="insert">
+    		<result name="success">/WEB-INF/content/Admin/Admin.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/Admin.jsp</result>
+    	</action>
+    	<action name="personalupdate" class="com.dzf.ssxk.SH.action.AdminAction" method="update">
+    		<result name="success">/WEB-INF/content/Admin/AdminPersonal.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/AdminPersonal.jsp</result>
+    	</action>
+    	<action name="pwdrestore" class="com.dzf.ssxk.SH.action.AdminAction" method="pwdrestore">
+    		<result name="success">/WEB-INF/content/Admin/Admin.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/Admin.jsp</result>
+    	</action>
+    	<action name="pwdupdate" class="com.dzf.ssxk.SH.action.AdminAction" method="pwdupdate">
+    		<result name="success">/WEB-INF/content/Admin/AdminPwdupdate.jsp</result>
+    		<result name="error">/WEB-INF/content/Admin/AdminPwdupdate.jsp</result>
+    	</action>
+    </package>
+   
+ 
+    
+ </struts>
+
+
+
